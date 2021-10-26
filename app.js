@@ -1,9 +1,15 @@
 const app = Vue.createApp({
     data: function() {
-        myGoal = "Build a Website",
+        myGoalA = "Build a Website",
+        myGoalB = "Learn Vue"
         myLink = "https://vuejs.org"
         return {
-            myGoal, myLink
+            myGoalA, myGoalB, myLink
+        }
+    },
+    methods: {
+        randomGoal () {
+            return Math.random() < 0.5 ? this.myGoalA : this.myGoalB;
         }
     }
 });
