@@ -13,21 +13,14 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <section id="assignment">
-      <!-- 1) Output your name -->
-      <h2>Hi, I'm {{name}}</h2>
-      <!-- 2) Output your age -->
-      <p>My age is {{age}}</p>
-      <!-- 3) Output your age + 5 -->
-      <p>I'm {{futureAge}} in 5 years</p>
-      <!-- 4) Output a random number (0 to 1) -->
-      <p>Favorite Number: {{favNum}}</p>
-      <div>
-        <!-- 5) Display some image you found via Google -->
-        <img v-bind:src="imgUrl" v-bind:width="imgSize.width" v-bind:height="imgSize.height"/>
-      </div>
-      <!-- 6) Prepopulate the input field with your name via the "value" attribute -->
-      <input type="text" v-bind:value="name" />
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section id="events">
+      <h2>Events in Action</h2>
+      <button v-on:Click="incCounter">Add</button>
+      <button v-on:Click="decCounter">Remove</button>
+      <p>Result: {{ counter }}</p>
     </section>
   </body>
 </html>
