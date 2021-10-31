@@ -21,8 +21,8 @@ const eventHandler =  {
         decCounter() {
             this.counter--;
         },
-        setName(eventHandler) {
-          this.name = eventHandler.target.value;
+        setName(eventHandler, string) {
+          this.name = eventHandler.target.value + string;
         }
     }
 };
