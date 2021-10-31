@@ -10,8 +10,9 @@ app.mount('#events'); */
 
 const eventHandler =  {
     data() {
-        counter = 0
-        return {counter}
+        counter = 0,
+        name = ""
+        return {counter, name}
     },
     methods: {
         incCounter() {
@@ -19,6 +20,9 @@ const eventHandler =  {
         },
         decCounter() {
             this.counter--;
+        },
+        setName(eventHandler) {
+          this.name = eventHandler.target.value;
         }
     }
 };
